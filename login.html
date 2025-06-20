@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="login.css" />
+  <title>Photography Login</title>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">
+      <a href="#"><img src="assets/logo-dark.png" alt="logo" /></a>
+    </div>
+    <div class="content">
+      <h1>Log in to Your Account</h1>
+      <div class="tabs">
+        <button class="tab__btn active" data-tab="1">User Login</button>
+        <span></span>
+        <button class="tab__btn" data-tab="2">Sign Up</button>
+        <span></span>
+        <button class="tab__btn" data-tab="3">Admin Login</button>
+      </div>
+
+      <div class="tabs__panel">
+
+        <!-- User Login -->
+        <div class="panel active" data-panel="1">
+          <form action="login.php" method="POST">
+            <div class="input__group">
+              <input type="email" name="email" placeholder=" " required />
+              <label for="email">Email</label>
+            </div>
+            <div class="input__group">
+              <input type="password" name="password" id="login-password" placeholder=" " required />
+              <label for="login-password">Password</label>
+              <span id="login-password-eye">
+                <i class="ri-eye-off-fill"></i>
+              </span>
+            </div>
+            <button type="submit">Log In</button>
+            <p>or</p>
+            <a href="#">Forgot your password?</a>
+          </form>
+        </div>
+
+        <!-- Sign Up -->
+        <div class="panel" data-panel="2">
+          <form action="signup.php" method="POST">
+            <div class="input__group">
+              <input type="text" name="name" placeholder=" " required />
+              <label for="name">Full Name</label>
+            </div>
+            <div class="input__group">
+              <input type="email" name="email" placeholder=" " required />
+              <label for="email">Email</label>
+            </div>
+            <div class="input__group">
+              <input type="password" name="password" id="signup-password" placeholder=" " required />
+              <label for="signup-password">Password</label>
+              <span id="signup-password-eye">
+                <i class="ri-eye-off-fill"></i>
+              </span>
+            </div>
+            <div class="input__group">
+              <input type="password" name="confirm_password" id="confirm-password" placeholder=" " required />
+              <label for="confirm-password">Confirm Password</label>
+              <span id="confirm-password-eye">
+                <i class="ri-eye-off-fill"></i>
+              </span>
+            </div>
+            <button type="submit">Sign Up</button>
+            <p>or</p>
+            <a href="#">Already have an account? <span>Login</span></a>
+          </form>
+        </div>
+
+        <!-- Admin Login -->
+        <div class="panel" data-panel="3">
+          <form action="admin-dashboard.html" method="POST">
+            <div class="input__group">
+              <input type="text" name="username" placeholder=" " required />
+              <label for="username">Username</label>
+            </div>
+            <div class="input__group">
+              <input type="password" name="password" id="admin-password" placeholder=" " required />
+              <label for="admin-password">Password</label>
+              <span id="admin-password-eye">
+                <i class="ri-eye-off-fill"></i>
+              </span>
+            </div>
+            <button type="submit">Admin Login</button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+    <div class="image"></div>
+  </div>
+
+  <!-- Tab switching -->
+  <script>
+    const tabButtons = document.querySelectorAll('.tab__btn');
+    const panels = document.querySelectorAll('.panel');
+
+    tabButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const target = btn.getAttribute('data-tab');
+
+        tabButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        panels.forEach(panel => {
+          panel.classList.remove('active');
+          if (panel.getAttribute('data-panel') === target) {
+            panel.classList.add('active');
+          }
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>

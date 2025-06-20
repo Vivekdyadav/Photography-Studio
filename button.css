@@ -1,0 +1,16 @@
+/* button.css */
+.book-btn {
+    padding: 12px 25px;
+    background-color: #ff4d4d; /* Red color */
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 16px;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+.book-btn:hover {
+    background-color: #e60000; /* Darker red on hover */
+}

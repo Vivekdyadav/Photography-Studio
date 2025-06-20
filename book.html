@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Appointment</title>
+    <link rel="stylesheet" href="book.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- 🔒 Login Check Script -->
+    <script>
+        const isLoggedIn = localStorage.getItem("isLoggedIn");
+        if (!isLoggedIn) {
+            window.location.href = "login.html";
+        }
+    </script>
+</head>
+<body>
+
+    <!-- Banner Section -->
+    <div class="booking-banner">
+        <div class="banner-overlay"></div>
+        <h1>Book Appointment</h1>
+    </div>
+
+    <!-- Booking Form Section -->
+    <section class="booking-form-section">
+        <h2>Booking Form</h2>
+        <p>Please confirm that you would like to request the following appointment:</p>
+
+        <form action="book.php" method="POST">
+            <input type="text" name="name" placeholder="Name*" required>
+            <input type="email" name="email" placeholder="E-mail*" required>
+            <input type="text" name="phone" placeholder="Phone Number" required>
+            <input type="text" name="address" placeholder="Address">
+
+            <select name="service" required>
+                <option value="">Service Type</option>
+                <option value="Wedding Photography">Wedding Photography</option>
+                <option value="New Born Photography">New Born Photography</option>
+                <option value="Fashion Photography">Fashion Photography</option>
+                <option value="Cinematography">Cinematography</option>
+            </select> 
+
+            <select name="location" required>
+                <option value="">Location</option>
+                <option value="Indoor">Indoor</option>
+                <option value="Outdoor">Outdoor</option>   
+            </select>
+
+            <!-- Date Field with min date set dynamically using JavaScript -->
+            <input type="date" name="date" id="booking-date" required>
+
+            <input type="time" name="time" required>
+
+            <select name="package" required>
+                <option value="">Select Photography Package</option>
+                <option value="Basic Package">Wedding Package Silver</option>
+                <option value="Premium Package">Wedding Package Gold</option>
+                <option value="Luxury Package">Wedding Package Platinum</option>
+                <option value="Luxury Package">Wedding Package Diamond</option>
+
+            </select>
+
+            <div class="full-width">
+                <button type="submit" class="btn-submit">Book Appointment</button>
+            </div>
+        </form>
+    </section>
+
+    <!-- 📅 JavaScript to set today's date as minimum in calendar -->
+    <script>
+        const today = new Date().toISOString().split('T')[0];
+        document.getElementById('booking-date').setAttribute('min', today);
+    </script>
+
+</body>
+</html>

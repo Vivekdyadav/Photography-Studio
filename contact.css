@@ -1,0 +1,123 @@
+/* Footer Section */
+footer {
+    background-color: #1c1c1c;
+    color: #fff;
+    padding: 40px 0;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .footer__container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+  
+  .footer__col {
+    width: 30%;
+  }
+  
+  .footer__col img {
+    max-width: 150px;
+    margin-bottom: 20px;
+  }
+  
+  .footer__socials a {
+    margin-right: 20px;
+    font-size: 24px;
+    color: #fff;
+    transition: color 0.3s ease;
+  }
+  
+  .footer__socials a:hover {
+    color: #00bcd4;
+  }
+  
+  .footer__links {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer__links li {
+    margin: 10px 0;
+  }
+  
+  .footer__links a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer__links a:hover {
+    color: #00bcd4;
+  }
+  
+  .footer__btn {
+    margin-top: 20px;
+  }
+  
+  .footer__btn .btn {
+    background-color: #00bcd4;
+    color: #fff;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .footer__btn .btn:hover {
+    background-color: #008c9e;
+  }
+  
+  .footer__booking {
+    background-color: #292929;
+    padding: 40px;
+    text-align: center;
+  }
+  
+  .footer__booking h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  .footer__booking p {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+  
+  footer form {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  footer form input,
+  footer form textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+  }
+  
+  footer form button {
+    background-color: #00bcd4;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  footer form button:hover {
+    background-color: #008c9e;
+  }
+  
+  .footer__bar {
+    background-color: #1a1a1a;
+    color: #bbb;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+  }
+  

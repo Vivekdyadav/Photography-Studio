@@ -1,2 +1,2 @@
-# Photography-Studio
-this is my college projects in final year of graduation 
+# Nat_Geo_Wild_28-03-24
+Unlock the power of web design with this tutorial on creating a Responsive Login &amp; Registration Form!
